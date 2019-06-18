@@ -17,7 +17,11 @@
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
 <body>
-	<audio src="http://www.170mv.com/kw/other.web.nf01.sycdn.kuwo.cn/resource/n2/66/54/1248844681.mp3" autoplay="autoplay"></audio>
+	<audio  autoplay="autoplay" loop id="audio">
+  <source src="https://webfs.yun.kugou.com/201906181720/df8516f41060d125febf1e8af3bd5474/G070/M01/16/13/JpQEAFet0OeAL6EGAEh6jVG1Pk4651.mp3" type="audio/mpeg" />
+Your browser does not support the audio element.
+</audio>
+
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
@@ -92,6 +96,14 @@
 			adjustCodePosition();
 			$("#code").typewriter(); // 打字效果
 		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('audio');
+            audio.play();
+    }
+    audioAutoPlay();
+})
 	</script>
 </body>
 </html>
